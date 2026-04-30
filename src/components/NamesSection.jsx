@@ -67,7 +67,7 @@ export default function NamesSection() {
             className={`block font-monte text-darkbrown text-shadow-gold reveal reveal-d1 ${visible ? "in-view" : ""}`}
             style={{ fontSize: "clamp(4.5rem, 16vw, 10rem)", lineHeight: 1.0 }}
           >
-            Habiba
+            Hatem
           </span>
           <span
             className={`block font-monte text-gold text-shadow-gold reveal reveal-d2 ${visible ? "in-view" : ""}`}
@@ -79,7 +79,7 @@ export default function NamesSection() {
             className={`block font-monte text-olive text-shadow-gold reveal reveal-d3 ${visible ? "in-view" : ""}`}
             style={{ fontSize: "clamp(4.5rem, 16vw, 10rem)", lineHeight: 1.0 }}
           >
-            Hatem
+            Habiba
           </span>
         </div>
 
@@ -93,7 +93,7 @@ export default function NamesSection() {
         {/* Date */}
         <p className={`font-cinzel tracking-[0.28em] text-rustgray reveal reveal-d4 ${visible ? "in-view" : ""}`}
           style={{ fontSize: "clamp(0.7rem, 2vw, 0.95rem)" }}>
-          28 · May · 2026 &nbsp;|&nbsp; 7:00 PM
+          28 · May · 2026 &nbsp;|&nbsp; 6:00 PM
         </p>
 
         {/* Venue hint */}

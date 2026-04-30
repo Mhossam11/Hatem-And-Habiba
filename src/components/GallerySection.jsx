@@ -2,7 +2,7 @@ import React from "react";
 import { useReveal } from "../hooks/useReveal";
 
 const images = [
-  { url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80", label: "Habiba & Hatem", span: "row-span-2" },
+  { url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80", label: "Hatem & Habiba", span: "row-span-2" },
   { url: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600&q=80", label: "" },
   { url: "https://images.unsplash.com/photo-1606216794079-73f1dab70b3d?w=600&q=80", label: "" },
   { url: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=600&q=80", label: "" },

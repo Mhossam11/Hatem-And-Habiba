@@ -78,6 +78,13 @@ export default function EnvelopeSection({ onOpen }) {
         <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       </div>
 
+      {/* "Click on me" hint at top */}
+      {!opened && (
+        <p className="relative z-10 font-monte text-gold/60 text-xl mb-4 animate-bounce">
+          click on me
+        </p>
+      )}
+
       {/* Envelope */}
       <div
         className="relative z-10 cursor-pointer perspective-1200 select-none"
@@ -159,7 +166,7 @@ export default function EnvelopeSection({ onOpen }) {
 
           {/* Inner letter card */}
           <div
-            className={`absolute left-1/2 -translate-x-1/2 z-[2] text-center ${
+            className={`absolute left-1/2 -translate-x-1/2 z-[2] text-center rounded-xl ${
               opened ? "letter-risen" : "letter-still"
             }`}
             style={{
@@ -167,30 +174,44 @@ export default function EnvelopeSection({ onOpen }) {
               width: "80%",
               background: "linear-gradient(160deg, #faf7f2 0%, #f5f0e8 100%)",
               border: "1px solid rgba(201,169,110,0.3)",
-              borderRadius: "3px",
+              // borderRadius: "3px",
               padding: "1.4rem 1rem 1rem",
               boxShadow:
                 "0 -4px 24px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5)",
             }}
           >
-            {/* Inner frame */}
-            <div className="absolute inset-[6px] border border-gold/15 rounded-sm pointer-events-none" />
-            <p
-              className="font-monte text-darkbrown"
-              style={{
-                fontSize: "clamp(1.6rem, 5vw, 2.4rem)",
-                lineHeight: 1.15,
-              }}
-            >
-              Hatem &amp; Habiba
-            </p>
-            <div className="w-20 h-px mx-auto my-2 bg-gradient-to-r from-transparent via-gold to-transparent" />
-            <p
-              className="font-cinzel text-rustgray tracking-[0.2em]"
-              style={{ fontSize: "0.46rem" }}
-            >
-              You are cordially invited
-            </p>
+            {opened ? (
+              <>
+                {/* Inner frame */}
+                <div className="absolute inset-[6px] border border-gold/15 rounded-xl pointer-events-none" />
+                <p
+                  className="font-monte text-darkbrown"
+                  style={{
+                    fontSize: "clamp(1.6rem, 5vw, 2.4rem)",
+                    lineHeight: 1.15,
+                  }}
+                >
+                  Hatem &amp; Habiba
+                </p>
+                <div className="w-20 h-px mx-auto my-2 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                <p
+                  className="font-cinzel text-rustgray tracking-[0.2em]"
+                  style={{ fontSize: "0.46rem" }}
+                >
+                  You are cordially invited
+                </p>
+              </>
+            ) : (
+              <p
+                className="font-monte text-darkbrown"
+                style={{
+                  fontSize: "clamp(1.2rem, 4vw, 1.8rem)",
+                  lineHeight: 1.15,
+                }}
+              >
+                you're invited to ..
+              </p>
+            )}
           </div>
         </div>
 

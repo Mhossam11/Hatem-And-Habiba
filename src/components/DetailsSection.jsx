@@ -66,7 +66,7 @@ export default function DetailsSection() {
             </p>
             <div className="w-10 h-px divider-gold mx-auto my-3" />
             <p className="font-cinzel tracking-widest text-goldlt/60" style={{ fontSize: "0.6rem" }}>
-              7:00 PM Onwards
+              6:00 PM Onwards
             </p>
           </div>
 

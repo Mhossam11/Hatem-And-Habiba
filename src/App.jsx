@@ -17,7 +17,7 @@ export default function App() {
       <GallerySection />
       <CountdownSection />
       <DetailsSection />
-      <VenueSection />
+      {/* <VenueSection /> */}
       <FooterSection />
     </main>
   );

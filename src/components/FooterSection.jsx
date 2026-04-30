@@ -71,7 +71,7 @@ export default function FooterSection() {
           className={`font-cinzel tracking-[0.28em] text-cream/35 reveal reveal-d3 ${visible ? "in-view" : ""}`}
           style={{ fontSize: "clamp(0.55rem, 1.4vw, 0.72rem)" }}
         >
-          28 · May · 2026 &nbsp;|&nbsp; 7:00 PM &nbsp;|&nbsp; La Novia Garden · Cairo
+          28 · May · 2026 &nbsp;|&nbsp; 6:00 PM &nbsp;|&nbsp; La Novia Garden · Cairo
         </p>
 
         {/* Bottom ornament */}

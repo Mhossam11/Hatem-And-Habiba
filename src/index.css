@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+}
+
+@layer utilities {
+  .perspective-1200 { perspective: 1200px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+
+  /* Envelope flap polygon */
+  .clip-flap { clip-path: polygon(0 0, 100% 0, 50% 100%); }
+
+  /* Left fold triangle */
+  .env-fold-left {
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 0 160px 50%;
+    border-color: transparent transparent #c8b896 transparent;
+    filter: brightness(0.88);
+  }
+  /* Right fold triangle */
+  .env-fold-right {
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 130px 0 0 50%;
+    border-color: #c8b896 transparent transparent transparent;
+    filter: brightness(0.82);
+  }
+
+  /* Text shadow utilities */
+  .text-shadow-gold { text-shadow: 0 2px 16px rgba(201,169,110,0.5); }
+  .text-shadow-dark { text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+
+  /* Divider line */
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+  }
+
+  /* Noise texture overlay */
+  .noise::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.04;
+  }
+}
+
+/* Staggered petal animations */
+.petal-1  { animation-delay: 0s;    animation-duration: 11s; }
+.petal-2  { animation-delay: 1.2s;  animation-duration: 13s; }
+.petal-3  { animation-delay: 2.4s;  animation-duration: 9s;  }
+.petal-4  { animation-delay: 3.6s;  animation-duration: 14s; }
+.petal-5  { animation-delay: 0.8s;  animation-duration: 10s; }
+.petal-6  { animation-delay: 4.5s;  animation-duration: 12s; }
+.petal-7  { animation-delay: 1.9s;  animation-duration: 15s; }
+.petal-8  { animation-delay: 5.1s;  animation-duration: 11s; }
+.petal-9  { animation-delay: 2.7s;  animation-duration: 13s; }
+.petal-10 { animation-delay: 6.3s;  animation-duration: 9s;  }
+.petal-11 { animation-delay: 3.3s;  animation-duration: 14s; }
+.petal-12 { animation-delay: 7.2s;  animation-duration: 12s; }
+
+/* Heart float stagger */
+.heart-1  { animation-delay: 0s;   animation-duration: 7s;  }
+.heart-2  { animation-delay: 1.4s; animation-duration: 9s;  }
+.heart-3  { animation-delay: 2.8s; animation-duration: 6s;  }
+.heart-4  { animation-delay: 4.2s; animation-duration: 8s;  }
+.heart-5  { animation-delay: 0.7s; animation-duration: 10s; }
+.heart-6  { animation-delay: 3.5s; animation-duration: 7s;  }
+.heart-7  { animation-delay: 5.6s; animation-duration: 9s;  }
+.heart-8  { animation-delay: 1.1s; animation-duration: 6s;  }
+
+/* Vine lines */
+.vine-1 { left: 8%;  height: 40%; top: 20%; animation-delay: 0s;   }
+.vine-2 { left: 92%; height: 35%; top: 30%; animation-delay: 2s;   }
+.vine-3 { left: 20%; height: 30%; top: 60%; animation-delay: 4s;   }
+.vine-4 { left: 80%; height: 45%; top: 10%; animation-delay: 1s;   }
+
+/* Flap open state */
+.flap-closed { transform: rotateX(0deg); }
+.flap-open   { animation: flap 0.9s cubic-bezier(0.4,0,0.2,1) forwards; }
+
+/* Letter rise */
+.letter-still { transform: translateX(-50%) translateY(0); }
+.letter-risen { animation: letterRise 0.9s cubic-bezier(0.4,0,0.2,1) 0.15s forwards; }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.22s; }
+.reveal-d3 { transition-delay: 0.34s; }
+.reveal-d4 { transition-delay: 0.46s; }
+.reveal-d5 { transition-delay: 0.58s; }
+.reveal-d6 { transition-delay: 0.70s; }
+
+/* Gallery card hover */
+.gallery-img { transition: transform 0.6s ease, filter 0.4s ease; }
+.gallery-card:hover .gallery-img { transform: scale(1.07); }
+
+/* Countdown flip */
+.count-num {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* Ornament spin */
+.ornament { display: inline-block; }

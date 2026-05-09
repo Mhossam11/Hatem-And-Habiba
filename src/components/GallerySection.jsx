@@ -2,11 +2,11 @@ import React from "react";
 import { useReveal } from "../hooks/useReveal";
 
 const images = [
-  { url: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80", label: "Hatem & Habiba", span: "row-span-2" },
-  { url: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600&q=80", label: "" },
-  { url: "https://images.unsplash.com/photo-1606216794079-73f1dab70b3d?w=600&q=80", label: "" },
-  { url: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=600&q=80", label: "" },
-  { url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80", label: "" },
+  { url: "/assets/1.jpeg", label: "Hatem & Habiba", span: "row-span-2" },
+  { url: "/assets/2.jpeg", label: "" },
+  { url: "/assets/3.jpeg", label: "" },
+  { url: "/assets/4.jpeg", label: "" },
+  { url: "/assets/5.jpeg", label: "" },
   { url: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&q=80", label: "" },
 ];
 
@@ -80,14 +80,6 @@ export default function GallerySection() {
             </div>
           ))}
         </div>
-
-        {/* Upload note */}
-        <p
-          className={`font-cormorant italic text-rustlt mt-8 reveal reveal-d6 ${visible ? "in-view" : ""}`}
-          style={{ fontSize: "clamp(0.85rem, 1.8vw, 1rem)" }}
-        >
-          Replace the image URLs in <code className="font-mono text-gold/70 text-sm">GallerySection.jsx</code> with your own couple photos
-        </p>
       </div>
     </section>
   );

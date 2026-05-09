@@ -78,13 +78,6 @@ export default function EnvelopeSection({ onOpen }) {
         <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       </div>
 
-      {/* "Click on me" hint at top */}
-      {!opened && (
-        <p className="relative z-10 font-monte text-gold/60 text-xl mb-4 animate-bounce">
-          click on me
-        </p>
-      )}
-
       {/* Envelope */}
       <div
         className="relative z-10 cursor-pointer perspective-1200 select-none"
@@ -202,15 +195,14 @@ export default function EnvelopeSection({ onOpen }) {
                 </p>
               </>
             ) : (
-              <p
-                className="font-monte text-darkbrown"
-                style={{
-                  fontSize: "clamp(1.2rem, 4vw, 1.8rem)",
-                  lineHeight: 1.15,
-                }}
-              >
-                you're invited to ..
-              </p>
+              <>
+                {/* "Click on me" hint at top */}
+                {!opened && (
+                  <p className="relative z-10 font-monte text-amber-700 text-4xl  animate-bounce">
+                    click on me
+                  </p>
+                )}
+              </>
             )}
           </div>
         </div>

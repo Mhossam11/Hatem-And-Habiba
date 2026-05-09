@@ -2,12 +2,12 @@ import React from "react";
 import { useReveal } from "../hooks/useReveal";
 
 const images = [
-  { url: "/assets/4.jpeg", label: "Hatem & Habiba", span: "row-span-2" },
-  { url: "/assets/1.jpeg", label: "" },
-  { url: "/assets/3.jpeg", label: "" },
-  { url: "/assets/2.jpeg", label: "" },
+  { url: "/assets/1.jpeg", label: "", span: "row-span-2" },
   { url: "/assets/5.jpeg", label: "" },
+  { url: "/assets/4.jpeg", label: "Hatem & Habiba" },
   { url: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&q=80", label: "" },
+  { url: "/assets/2.jpeg", label: "" },
+  { url: "/assets/3.jpeg", label: "" },
 ];
 
 export default function GallerySection() {

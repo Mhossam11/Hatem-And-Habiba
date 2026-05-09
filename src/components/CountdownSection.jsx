@@ -110,7 +110,7 @@ export default function CountdownSection() {
           className={`font-cormorant italic text-rustlt mt-10 reveal reveal-d5 ${visible ? "in-view" : ""}`}
           style={{ fontSize: "clamp(0.9rem, 2vw, 1.1rem)" }}
         >
-          Wednesday, 28 May 2026 &nbsp;·&nbsp; 6:00 PM &nbsp;·&nbsp; La Novia Garden
+          Thursday, 28 May 2026 &nbsp;·&nbsp; 6:00 PM &nbsp;·&nbsp; La Novia Garden
         </p>
       </div>
     </section>

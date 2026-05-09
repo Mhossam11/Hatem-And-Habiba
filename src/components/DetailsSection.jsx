@@ -62,7 +62,7 @@ export default function DetailsSection() {
               28 May
             </p>
             <p className="font-cormorant text-cream/70 mt-1" style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)" }}>
-              Wednesday, 2026
+              Thursday, 2026
             </p>
             <div className="w-10 h-px divider-gold mx-auto my-3" />
             <p className="font-cinzel tracking-widest text-goldlt/60" style={{ fontSize: "0.6rem" }}>

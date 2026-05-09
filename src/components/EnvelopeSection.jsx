@@ -228,6 +228,7 @@ export default function EnvelopeSection({ onOpen }) {
           28 · May · 2026
         </p>
       </div>
+
     </section>
   );
 }
